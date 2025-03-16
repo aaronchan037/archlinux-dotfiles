@@ -1,13 +1,13 @@
-dotfiles_dir=~/repos/dotfiles-linux
+set dotfiles_dir '~/repos/dotfiles-linux'
 
-### Linux command
+# Update
+alias update="yes | sudo pacman -Syu"
+# Sync dotfiles
+alias sync="python3 $dotfiles_dir/sync.py arch"
+
 alias rm="rm -i"
 alias ll="ls -alh"
 
-# reload zsh config
-alias reload="source ~/.zshrc"
-
-# python3
 alias pip="pip3"
 alias python="python3"
 # python3 pip update
@@ -15,9 +15,6 @@ alias pyupdate="python3 $dotfiles_dir/scripts/pip-update.py"
 
 # git last push
 alias lastpush="sh $dotfiles_dir/scripts/last-push.sh"
-
-# tar dotfiles
-# alias tardf="sh ~/repos/dotfiles/scripts/tar-dotfiles.sh"
 
 alias github="code ~/repos"
 alias totex="code ~/tex"
@@ -33,4 +30,3 @@ alias ff="fastfetch"
 alias coding="code ~/coding"
 # cd rust
 alias cdrust="code ~/coding/rust-learn"
-##########################

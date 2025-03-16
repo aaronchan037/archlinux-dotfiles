@@ -1,5 +1,5 @@
 
-dotfiles=$PWD
+dotfiles=~/repos/dotfiles-linux
 # echo $dotfiles
 
 rm -f ~/.oh-my-zsh/themes/sexy-zsh.zsh-theme

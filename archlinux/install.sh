@@ -22,6 +22,8 @@ base_install()
   yes | sudo pacman -S tar p7zip zip unzip
   # mysql
   sudo pacman -S mysql
+  # fish
+  yes | sudo pacman -S fish && fish --version
 }
 
 # 不要折腾各种CLI工具和沉迷于配置这些工具，Linux系统是给你学习编程的，而不是用于娱乐的

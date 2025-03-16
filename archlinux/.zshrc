@@ -95,8 +95,7 @@ dotfiles_dir=~/repos/dotfiles-linux
 
 # Update
 alias update="yes | sudo pacman -Syu"
-###### Sync files ######
-# dotfiles sync
+# Sync dotfiles
 alias sync="python3 $dotfiles_dir/sync.py arch"
 # alias sync-arch="cd ~/repos/dotfiles-linux; make"
 

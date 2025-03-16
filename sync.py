@@ -4,13 +4,13 @@ import os,sys
 dotfiles = "~/repos/dotfiles-linux"
 
 # Arch Linux
-zsh_setting = [".zshrc", ".zshenv"]
+shell_setting = [".zshrc", ".zshenv"]
 # Other settings
 base_alias = [".sh_alias", ".gitconfig", ".gitmessage", ".vimrc"]
 other_settings = [".gnupg/gpg-agent.conf", ".gnupg/gpg.conf", ".ssh/config", ".cargo/config.toml"]
 
 files = base_alias + other_settings
-dirs = [".config/nvim", ".config/tmux", ".config/lazygit", ".config/containers", ".pip"]
+dirs = [".config/nvim", ".config/tmux", ".config/lazygit", ".config/containers", ".pip", ".config/fish/config.fish"]
 
 def archlinux_file(file_name):
     command = f"rm -f ~/{file_name} && ln -s {dotfiles}/archlinux/{file_name} ~/{file_name}"
@@ -35,7 +35,7 @@ def arch():
     for i in files:
         os.system(f"{del_check_file(i)}")
     print("===== Arch Linux =====")
-    for i in zsh_setting:
+    for i in shell_setting:
         os.system(f"{archlinux_file(i)}")
 
 eval(sys.argv[1] + "()")

@@ -71,3 +71,8 @@ Server = https://mirrors.aliyun.com/archlinuxcn/$arch
 sudo pacman -Sy archlinuxcn-keyring
 
 sudo pacman -Su archlinuxcn-mirrorlist-git
+
+
+# 可以查看第一次使用archlinux是什么时候
+head -1 /var/log/pacman.log
+
